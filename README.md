@@ -6,7 +6,7 @@
 
 ---
 
-### **Table of Contents**
+## **Table of Contents**
 - [What is Conda?](#what-is-conda)
 - [Prerequisites](#prerequisites)
 - [Download Miniconda](#download-miniconda)
@@ -39,38 +39,38 @@
 ## What is Conda?
 Conda is an open-source, cross-platform, language-agnostic package manager and environment management system. It facilitates the installation, upgrade, and management of software packages and their dependencies. Conda helps avoid conflicts between different package versions and environments, making it easier to resolve "dependency hell". This guide focuses on the Anaconda Distribution of Conda, which includes a large collection of scientific packages and is widely used in the data science and machine learning communities.
 
-### Prerequisites
+## Prerequisites
 - Ensure you have administrative access on your computer.
 - Internet connection to download Miniconda installer.
 
-### Download Miniconda
+## Download Miniconda
 1. Visit the [official Miniconda download page](https://docs.conda.io/en/latest/miniconda.html).
 2. Select the installer appropriate for your operating system (Windows, macOS, Linux).
 3. Choose between Python 3.x and 2.x versions (recommend using the latest Python 3 version).
 
-### Installation Instructions
+## Installation Instructions
 
-#### Windows
+### Windows
 1. Run the `.exe` installer and follow the on-screen instructions.
    - Choose the install location.
    - Opt to add Miniconda to your PATH (optional but recommended).
    - Choose whether to register Miniconda as your default Python.
 2. Open the Command Prompt and verify the installation.
 
-#### macOS
+### macOS
 1. Open a terminal window.
 2. Navigate to the directory containing the downloaded `.sh` file.
 3. Run the installer by typing `bash Miniconda3-latest-MacOSX-x86_64.sh` and follow the on-screen instructions.
 4. Verify the installation and initialize Miniconda.
 
-#### Linux
+### Linux
 1. Open a terminal window.
 2. Navigate to the directory containing the downloaded `.sh` file.
 3. Make the installer script executable with `chmod +x Miniconda3-latest-Linux-x86_64.sh`.
 4. Run the installer by typing `./Miniconda3-latest-Linux-x86_64.sh` and follow the on-screen instructions.
 5. Optionally, run `source ~/.bashrc` to refresh your shell and apply the changes.
 
-### Verifying Installation
+## Verifying Installation
 - Verify your installation by typing `conda list` in your terminal or Command Prompt. This command should list the installed packages.
 
 ## Creating a New Environment
