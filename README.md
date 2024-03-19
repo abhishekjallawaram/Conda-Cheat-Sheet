@@ -134,3 +134,61 @@ For packages not available through Conda, or to leverage pip-specific features:
 pip install package_name
 pip uninstall package_name
 ```
+
+### Listing Packages
+Show all packages installed in the active environment:
+```bash
+conda list
+```
+
+### Searching for Packages
+Find packages by name or pattern:
+```bash
+conda search 'regex_pattern'
+```
+
+### Identifying Outdated Packages
+Check for available package updates:
+```bash
+conda search --outdated
+```
+
+For `pip`-installed packages:
+```bash
+pip list --outdated
+```
+
+## Removing an Environment
+Delete an entire environment and its contents:
+```bash
+conda remove --name myenv --all
+```
+
+## Renaming an Environment
+Conda does not directly support renaming, but you can clone and delete:
+```bash
+conda create --name newname --clone oldname
+conda remove --name oldname --all
+```
+
+## Managing Conda Channels
+Conda packages are downloaded from repositories called "channels". The default channel can be overridden or supplemented with additional channels to find packages not available in the default:
+```bash
+conda install package_name -c conda-forge
+```
+
+Add a channel to the search list permanently:
+```bash
+conda config --add channels channel_name
+```
+
+List all channels:
+```bash
+conda config --get channels
+```
+
+## Troubleshooting Common Issues
+
+* Solving environment takes too long: Try minimizing the number of packages or using the `--no-update-deps` flag to avoid updating dependencies.
+* Package conflict: Identify conflicting packages and consider manually installing specific versions or using a different channel.
+* Conda command not found: Ensure Conda is properly installed and the path to Conda is added to your system's PATH environment variable.
