@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://commons.wikimedia.org/wiki/File:Conda_logo.svg" alt="Conda Logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Conda_logo.svg" alt="Conda Logo">
     <p>This repository serves as a comprehensive Conda Cheat Sheet, designed to be a handy reference for Conda commands and best practices.<br>
     Beginners are encouraged to start with <a href="https://conda.io/projects/conda/en/latest/user-guide/getting-started.html">Getting Started with Conda</a>.</p>
 </div>
