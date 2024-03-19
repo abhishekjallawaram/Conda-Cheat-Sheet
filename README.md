@@ -204,6 +204,9 @@ Manually remove the Anaconda or Miniconda directory afterwards.
 
 ## Uninstalling Anaconda or Miniconda
 
-Official Conda Documentation
-Conda GitHub Repository
-Anaconda Community Support
+* <a href="https://docs.conda.io/en/latest/">Official Conda Documentation</a>.</p>
+* <a href="https://github.com/conda/conda">Conda GitHub Repository</a>.</p>
+* <a href="https://community.anaconda.cloud/">Anaconda Community Support</a>.</p>
+
+
+
