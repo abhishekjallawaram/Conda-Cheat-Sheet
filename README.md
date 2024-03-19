@@ -195,6 +195,15 @@ Set an environment variable:
 conda env config vars set MY_VARIABLE=value
 ```
 
+Unset an environment variable:
+```bash
+conda env config vars unset MY_VARIABLE
+```
+
+After setting or unsetting environment variables, you need to reactivate your environment for the changes to take effect.
+
+## Setting Environment Variables
+
 ## Troubleshooting Common Issues
 
 * Solving environment takes too long: Try minimizing the number of packages or using the `--no-update-deps` flag to avoid updating dependencies.
