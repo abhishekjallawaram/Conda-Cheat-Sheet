@@ -79,5 +79,10 @@ To create a new environment without any default packages:
 ```bash
 conda create --name myenv --no-default-packages
 ```
+To specify a Python version and initial packages at creation:
+
+```bash
+conda create --name myenv python=3.8 numpy pandas
+```
 
 
