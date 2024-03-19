@@ -33,6 +33,8 @@
 - [Renaming an Environment](#renaming-an-environment)
 - [Managing Conda Channels](#managing-conda-channels)
 - [Setting Environment Variables](#setting-environment-variables)
+- [Using Docker with Conda](#using-docker-with-conda)
+- [Best Practices](#best-practices)
 - [Troubleshooting Common Issues](#troubleshooting-common-issues)
 - [Uninstalling Anaconda or Miniconda](#uninstalling-anaconda-or-miniconda)
 - [Additional Resources](#additional-resources)
@@ -202,7 +204,41 @@ conda env config vars unset MY_VARIABLE
 
 After setting or unsetting environment variables, you need to reactivate your environment for the changes to take effect.
 
-## Setting Environment Variables
+## Using Conda with Docker
+
+Conda can be used within Docker containers to manage dependencies more effectively. Here’s a basic example of a Dockerfile using Miniconda:
+
+```bash
+# Use an official Miniconda runtime as a parent image
+FROM continuumio/miniconda3
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy the current directory contents into the container at /usr/src/app
+COPY . .
+
+# Install any needed packages specified in environment.yml
+COPY environment.yml .
+RUN conda env create -f environment.yml
+
+# Make RUN commands use the new environment:
+SHELL ["conda", "run", "-n", "myenv", "/bin/bash", "-c"]
+
+# Run app.py when the container launches
+CMD ["conda", "run", "-n", "myenv", "python", "app.py"]
+
+```
+
+## Best Practices for Managing Environments and Packages
+
+* **Keep environments lean:** Only install the packages you need to reduce complexity and improve environment reproducibility.
+* **Use environment.yml:** Define your environment and dependencies in an `environment.yml` file for easier creation and sharing.
+* **Regularly update your environments:** Keep your packages up to date with the latest versions to benefit from security patches and performance improvements.
+* **Use channels cautiously:** Adding too many channels can slow down Conda operations and introduce package conflicts. Prefer well-known channels like `conda-forge`.
+* **Clean up unused packages and environments:** Regularly use `conda clean --all` to remove unused packages and environments to free up space.
+* **Version control for environments:** Keep `environment.yml` files under version control to track changes in your dependencies.
+
 
 ## Troubleshooting Common Issues
 
