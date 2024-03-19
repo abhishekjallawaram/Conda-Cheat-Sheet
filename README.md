@@ -192,3 +192,18 @@ conda config --get channels
 * Solving environment takes too long: Try minimizing the number of packages or using the `--no-update-deps` flag to avoid updating dependencies.
 * Package conflict: Identify conflicting packages and consider manually installing specific versions or using a different channel.
 * Conda command not found: Ensure Conda is properly installed and the path to Conda is added to your system's PATH environment variable.
+
+## Uninstalling Anaconda or Miniconda
+Clean uninstallation of the distribution, including all user settings and environments:
+```bash
+conda install anaconda-clean
+anaconda-clean --yes
+```
+
+Manually remove the Anaconda or Miniconda directory afterwards.
+
+## Uninstalling Anaconda or Miniconda
+
+Official Conda Documentation
+Conda GitHub Repository
+Anaconda Community Support
