@@ -128,7 +128,7 @@ conda install package_name
 conda remove package_name
 ```
 
-### Using 'Pip' in Conda
+### Using `Pip` in Conda
 For packages not available through Conda, or to leverage pip-specific features:
 ```bash
 pip install package_name
