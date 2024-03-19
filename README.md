@@ -32,6 +32,7 @@
 - [Removing an Environment](#removing-an-environment)
 - [Renaming an Environment](#renaming-an-environment)
 - [Managing Conda Channels](#managing-conda-channels)
+- [Setting Environment Variables](#setting-environment-variables)
 - [Troubleshooting Common Issues](#troubleshooting-common-issues)
 - [Uninstalling Anaconda or Miniconda](#uninstalling-anaconda-or-miniconda)
 - [Additional Resources](#additional-resources)
@@ -185,6 +186,13 @@ conda config --add channels channel_name
 List all channels:
 ```bash
 conda config --get channels
+```
+## Setting Environment Variables
+Conda environments can have their own set of environment variables. To manage environment variables specific to an environment, you can use the `conda env config vars` command:
+
+Set an environment variable:
+```bash
+conda env config vars set MY_VARIABLE=value
 ```
 
 ## Troubleshooting Common Issues
