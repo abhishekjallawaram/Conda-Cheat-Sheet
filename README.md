@@ -80,9 +80,57 @@ To create a new environment without any default packages:
 conda create --name myenv --no-default-packages
 ```
 To specify a Python version and initial packages at creation:
-
 ```bash
 conda create --name myenv python=3.8 numpy pandas
 ```
 
+### Listing Environments
+View all Conda environments, along with their paths:
+```bash
+conda env list
+```
 
+### Cloning Environments
+Duplicate an existing environment, useful for creating a similar setup:
+```bash
+conda create --name newenv --clone baseenv
+```
+
+### Importing from a YAML File
+Recreate an environment from a YAML configuration file:
+```bash
+conda env create -f environment.yml
+```
+## Exporting an Environment
+Share or replicate your setup by exporting the environment to a YAML file:
+```bash
+conda env export > environment.yml
+```
+
+## Activating and Deactivating Environments
+Switch to a specific environment or revert to the base environment:
+```bash
+conda activate myenv
+conda deactivate
+```
+
+## Updating Environments
+Keep the environment and its packages up to date:
+```bash
+conda update --all
+```
+
+## Managing Packages
+### Installation and Uninstallation
+Add or remove packages within the active environment:
+```bash
+conda install package_name
+conda remove package_name
+```
+
+### Using 'Pip' in Conda
+For packages not available through Conda, or to leverage pip-specific features:
+```bash
+pip install package_name
+pip uninstall package_name
+```
